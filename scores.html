@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  font-family: 'lato', sans-serif;
+}
+
+h2 {
+  font-size: 26px;
+  margin: 20px 0;
+  text-align: center;
+  small {
+    font-size: 0.5em;
+  }
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+</style>
+
+<script>
+
+var imgs = new Array ("trophy2","star_gold","starb","star","gray_star","phantom")
+var nomes = new Array ("AGATA RAIZA SANTOS LIMA",
+"ANDRE FERNANDES SAITO",
+"ANNA DE SOUZA CRUZ RAVAGLIO",
+"BRUNO GODOI MACHADO",
+"CASSIA APARECIDA BARBOSA",
+"DANIEL DIAS DE LIMA",
+"DANIEL TEIXEIRA RODRIGUES",
+"FABRICIO GUILHERMO BEATRICE DE OLIVEIRA",
+"FELIPE KACA PETERSEN",
+"FILIPE AVELINO MONTOTO",
+"GABRIELA OSHIMA TEIXEIRA",
+"GUILHERME ENES PECCI",
+"JOAO VICTOR RIZOTTO COELHO",
+"LEONARDO AMORIM DE OLIVEIRA",
+"LEONARDO FUSO NUZZO",
+"LORENZO RYBU BUGLIONE",
+"LUCAS FRANCHINI BAES",
+"LUCCA FERRI DE SOUZA",
+"MATHEUS MASUMOTO DE CARVALHO",
+"MAURICIO LUCIANELLI JUNIOR",
+"PEDRO JOANINI CARDOSO",
+"RENATO SOUSA NAKANO",
+"VICTOR MARTINI DOMINGUES",
+"VITOR RAVACCI NUNES DE OLIVEIRA")
+  
+  var tias = new Array ( 41557913,
+41509269,
+31837050,
+31829929,
+31808204,
+31687679,
+31839010,
+31835597,
+41701224,
+31858945,
+31844057,
+31840450,
+31841287,
+31842178,
+31500129,
+31809081,
+31849202,
+31855441,
+31850741,
+31818587,
+31852238,
+31851835,
+31812521,
+31817750)
+
+var ns = new Array (0,0,3,3,1,0,2,4,4,1,3,2,0,4,0,5,1,3,1,4,1,1,2,4)
+</script>
+</head>
+<BODY>
+  <h2>Avaliação do Desafio 1 <small>Infográficos</small></h2>
+  <TABLE>
+      <TR><TD>TIA</TD>
+      <TD>Nome</TD>
+      <TD>Avaliação</TD>
+      <TD>Link</TD></TR>
+    </li>
+  
+  <script>
+  
+  function f(n)
+  { str = "<IMG SRC='"+imgs[5-ns[n]]+".png' WIDTH=50 HEIGHT=50>" 
+  return str; }
+  
+  function mount(i)
+  {
+   return ns[i]?"<A HREF='desafio1/"+nomes[i]+".png' TARGET='_neue'>Link</A>":""
+  }
+  for (i=0; i<tias.length; i++)
+   document.write("<TR><TD>"+ tias[i]+"</TD><TD>"+nomes[i]+"</TD><TD>"+f(i)+"</TD><TD>"+mount(i)+"</TD><TD>");
+  </script>
+ </ul>
+</div>
+</body></html>
