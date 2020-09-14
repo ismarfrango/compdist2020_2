@@ -86,11 +86,13 @@ var compl = new Array (".png","/")
 </script>
 </head>
 <BODY>
-  <h2>Avaliação do Desafio 1 <small>Infográficos</small></h2>
+  <h2>Avaliação dos Desafios <small>Infográficos</small></h2>
   <TABLE>
       <TR><TD>TIA</TD>
       <TD>Nome</TD>
-      <TD>Avaliação</TD>
+      <TD>Desafio 1</TD>
+      <TD>Link</TD></TR>
+      <TD>Desafio 2</TD>
       <TD>Link</TD></TR>
     </li>
   
@@ -104,9 +106,13 @@ var compl = new Array (".png","/")
   {
    return ns[k][i]?"<A HREF='desafio"+(k+1)+"/"+nomes[i]+compl[k]+"' TARGET='_neue'>Link</A>":""
   }
-  for (k=0; k<NDES; k++)
+
    for (i=0; i<tias.length; i++)
-    document.write("<TR><TD>"+ tias[i]+"</TD><TD>"+nomes[i]+"</TD><TD>"+f(k,i)+"</TD><TD>"+mount(k,i)+"</TD><TD>");
+   {  document.write("<TR><TD>"+ tias[i]+"</TD><TD>"+nomes[i]+"</TD>")
+      for (k=0; k<NDES; k++)
+        document.write("<TD>"+f(k,i)+"</TD><TD>"+mount(k,i)+"</TD><TD>");
+      document.write("</TR>")
+   }
   </script>
  </ul>
 </div>
