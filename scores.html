@@ -80,7 +80,9 @@ var nomes = new Array ("AGATA RAIZA SANTOS LIMA",
 31812521,
 31817750)
 
-var ns = new Array (0,0,3,3,1,0,2,4,4,1,3,2,0,4,0,5,1,3,1,4,1,1,2,4)
+var ns = new Array ((0,0,3,3,1,0,2,4,4,1,3,2,0,4,0,5,1,3,1,4,1,1,2,4),(0,0,3,4,4,4,5,1,3,2,4,2,1,1,4,2,1,1,1,4,1,4,3,4))
+
+var comp = new Array (".png","/")
 </script>
 </head>
 <BODY>
@@ -93,17 +95,18 @@ var ns = new Array (0,0,3,3,1,0,2,4,4,1,3,2,0,4,0,5,1,3,1,4,1,1,2,4)
     </li>
   
   <script>
-  
-  function f(n)
-  { str = "<IMG SRC='"+imgs[5-ns[n]]+".png' WIDTH=50 HEIGHT=50>" 
+  var NDES = 2;
+  function f(k,n)
+  { str = "<IMG SRC='"+imgs[5-ns[k][n]]+".png' WIDTH=50 HEIGHT=50>" 
   return str; }
   
-  function mount(i)
+  function mount(k,i)
   {
-   return ns[i]?"<A HREF='desafio1/"+nomes[i]+".png' TARGET='_neue'>Link</A>":""
+   return ns[k][i]?"<A HREF='desafio"+(k+1)+"/"+nomes[i]+compl[k]+"' TARGET='_neue'>Link</A>":""
   }
-  for (i=0; i<tias.length; i++)
-   document.write("<TR><TD>"+ tias[i]+"</TD><TD>"+nomes[i]+"</TD><TD>"+f(i)+"</TD><TD>"+mount(i)+"</TD><TD>");
+  for (k=0; k=NDES; k++)
+   for (i=0; i<tias.length; i++)
+    document.write("<TR><TD>"+ tias[i]+"</TD><TD>"+nomes[i]+"</TD><TD>"+f(k,i)+"</TD><TD>"+mount(k,i)+"</TD><TD>");
   </script>
  </ul>
 </div>
