@@ -82,7 +82,7 @@ var nomes = new Array ("AGATA RAIZA SANTOS LIMA",
 
 var ns = [[0,0,3,3,1,0,2,4,4,1,3,2,1,4,0,5,1,3,1,4,1,1,2,4],[0,0,3,4,4,4,5,1,3,2,4,2,1,1,4,2,1,1,1,4,1,4,3,4],
          [0,0,5,5,5,4,5,5,5,4,4,5,4,5,4,5,5,5,4,5,4,5,5,5],[0,0,3,4,4,3,3,3,3,4,3,3,3,3,5,4,3,3,3,3,3,3,3,3],
-         [0,0,4,4,3,4,5,2,4,4,5,2,2,4,4,4,3,2,2,3,0,3,2,2]]
+         [0,0,4,4,3,4,5,2,4,4,5,2,2,4,4,4,3,2,2,3,0,3,2,2],[0,0,4,5,5,3,5,4,4,5,5,5,4,4,4,3,5,4,4,5,4,5,5,5]]
 
 var compl = new Array (".png","/" )
 </script>
@@ -92,20 +92,25 @@ var compl = new Array (".png","/" )
   <TABLE>
       <TR><TD>TIA</TD>
       <TD>Nome</TD>
-      <TD>Desafio 1</TD>
+      <TD BGCOLOR="#FFFFC0">Desafio 1</TD>
       <TD>Link</TD>
-      <TD>Desafio 2</TD>
+      <TD BGCOLOR="#FFFFC0">Desafio 2</TD>
       <TD>Link</TD>
-      <TD>Av. conceitual Q1</TD>
-      <TD>Av. conceitual Q2</TD>
-      <TD>Av. prática (proj.)</TD>   
+      <TD BGCOLOR="#C0C0FF">Av. conceitual Q1</TD>
+      <TD BGCOLOR="#C0C0FF">Av. conceitual Q2</TD>
+      <TD BGCOLOR="#C0C0FF">Av. prática (proj.)</TD>
+      <TD BGCOLOR="#FFFFC0">Entregas</TD>
     </TR>
   
   <script>
   var NDES = 2;
-  var NN = 3;
-  function f(k,n)
+  var NN = 2;
+  function f(k,n) //yestrophy
   { str = "<IMG SRC='"+imgs[5-(ns[k][n])]+".png' WIDTH=50 HEIGHT=50>" 
+  return str; }
+  
+  function g(k,n) //notrophy
+  { str = "<IMG SRC='"+imgs[6-(ns[k][n])]+".png' WIDTH=50 HEIGHT=50>" 
   return str; }
   
   function mount(k,i)
@@ -117,8 +122,11 @@ var compl = new Array (".png","/" )
    {  document.write("<TR><TD>"+ tias[i]+"</TD><TD>"+nomes[i]+"</TD>")
       for (k=0; k<NDES; k++)
         document.write("<TD>"+f(k,i)+"</TD><TD>"+mount(k,i)+"</TD>");
-      for (k=NDES; k<NN; k++)
-        document.write("<TD>"+f(k,i)+"</TD>")
+      for (k=NDES; k<NN+NDES; k++)
+        document.write("<TD>"+g(k,i)+"</TD>")
+      document.write("<TD>"+f(k,i)+"</TD>")
+      document.write("<TD>"+g(k+1,i)+"</TD>")
+    
       document.write("</TR>")
    }
   </script>
