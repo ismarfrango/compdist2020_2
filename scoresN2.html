@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  font-family: 'lato', sans-serif;
+}
+
+h2 {
+  font-size: 26px;
+  margin: 20px 0;
+  text-align: center;
+  small {
+    font-size: 0.5em;
+  }
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+</style>
+
+<script>
+
+var imgs = new Array ("trophy2","star_gold","starb","star","gray_star","phantom","phantom")
+var hearts = new Array ("red","pink","pink","pink","yellow","yellow","gray","gray","gray","gray","white");
+  
+  var tias = new Array ( 41557913,
+41509269,
+31837050,
+31829929,
+31808204,
+31687679,
+31839010,
+31835597,
+41701224,
+31858945,
+31844057,
+31840450,
+31841287,
+31842178,
+31500129,
+31809081,
+31849202,
+31855441,
+31850741,
+31818587,
+31852238,
+31851835,
+31812521,
+31817750)
+
+var ns = [[0,0,4,3,4,0,4,3,4,4,3,4,3,5,0,3,0,3,0,4,3,4,3,4],[0,0,2,4,3,2,2,2,2,4,5,5,2,2,2,2,2,5,4,4,2,5,3,2],[0,0,3,5,4,5,5,4,5,3,4,4,4,5,5,3,5,3,3,3,4,3,3,4],[0,0,3,3,5,4,3,3,2,3,3,3,3,3,4,3,3,3,3,3,3,4,0,3]]
+
+var soft = [0,0,10,10,10,5,10,8,10,9,10,10,5,10,5,10,4,10,6,10,6,10,9,10]
+
+var compl = new Array (".png","/" )
+</script>
+</head>
+<BODY>
+  <h2>Avaliação <span style="background-color:#FFFFC0">Formativa</span> e <span style="background-color:#C0C0FF">Somativa</span> <small> N2 </small></h2>
+  <TABLE>
+      <TR><TD>ID</TD>
+      <TD BGCOLOR="#FFFFC0">Desafio 1 - P2P</TD>
+      <TD BGCOLOR="#FFFFC0">Desafio 2 - Grid</TD>
+      <TD BGCOLOR="#C0C0FF">Av. prática </TD>
+      <TD BGCOLOR="#C0C0FF">Av. conceitual </TD>
+	  <TD BGCOLOR="#FFC0C0">Soft Skills (N1+N2) </TD>
+    </TR>
+  
+  <script>
+  var NDES = 4;
+  function f(k,n) //yestrophy
+  { str = "<IMG SRC='"+imgs[5-(ns[k][n])]+".png' WIDTH=50 HEIGHT=50>" 
+  return str; }
+  
+  function h(n) //hearts
+  { str = "<IMG SRC='c_"+hearts[10-soft[n]]+".png' WIDTH=50 HEIGHT=50>" 
+  return str; }
+  
+
+
+   for (i=0; i<tias.length; i++)
+   {  document.write("<TR><TD>"+ (""+tias[i]).substring(4,8) +"</TD>")
+      for (k=0; k<NDES; k++)
+        document.write("<TD>"+f(k,i)+"</TD>");  
+      document.write("<TD>"+h(i)+"</TD>");
+	  document.write("</TR>")
+   }
+  </script>
+ </ul>
+</div>
+</body></html>
